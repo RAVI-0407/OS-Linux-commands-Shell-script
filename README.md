@@ -1152,6 +1152,7 @@ else
 fi
 ```
 $chmod 755 palindrome.sh
+
 $./palindrome.sh
 ## OUTPUT 
 
