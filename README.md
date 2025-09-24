@@ -483,21 +483,21 @@ ls file1
 echo $?
 ## OUTPUT 
 
-![Alt text](<img/echo $?1.png>)
+![Alt text](img/echo1.png)
 
 ./onebash:./one: Permission denied
  
 echo $?
 ## OUTPUT 
  
-![Alt text](img/echo$?.png)
+![Alt text](img/echo2.png)
 
 abcd
  
 echo $?
  ## OUTPUT
 
-![Alt text](<img/echo $?2.png>)
+![Alt text](img/echo3.png)
  
 # mis-using string comparisons
 
