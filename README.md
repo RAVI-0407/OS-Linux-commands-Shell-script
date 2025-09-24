@@ -483,22 +483,21 @@ ls file1
 echo $?
 ## OUTPUT 
 
-![Alt text](<img/echo $?.png>)
+![Alt text](<img/echo $?1.png>)
 
-./onebash: ./one: Permission denied
+./onebash:./one: Permission denied
  
 echo $?
 ## OUTPUT 
  
-![Alt text](<img/echo $?2.png>)
+![Alt text](img/echo$?.png)
 
 abcd
  
 echo $?
  ## OUTPUT
 
-![Alt text](<img/echo $?
-.png>)
+![Alt text](<img/echo $?2.png>)
  
 # mis-using string comparisons
 
@@ -528,16 +527,11 @@ else
 echo "$val1 is less than $val2"
 fi
 ```
-##OUTPUT
-
-
-
 chmod 755 strcomp.sh
- 
 ./strcomp.sh 
 ## OUTPUT
 
-[Title](img/.strcomp.shpng)
+![Alt text](<img/. strcomp.sh.png>)
 
 # check file ownership
 cat < psswdperm.sh 
