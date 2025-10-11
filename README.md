@@ -438,7 +438,7 @@ cat herecheck.txt
 
 cat < scriptest.sh 
 ```bash
-\#!/bin/sh
+#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
 echo “First arg. is ” $1
@@ -449,12 +449,11 @@ echo 'The $@ is ' $@
 echo 'The $\# is ' $1#
 echo 'The $$ is ' $$
 ps
-^d
- ```
+```
 
 cat scriptest.sh 
 ```bash
-\#!/bin/sh
+#!/bin/sh
 echo “File name is $0 ”
 echo "File name is " `basename $0`
 echo “First arg. is ” $1
@@ -473,7 +472,7 @@ chmod 777 scriptest.sh
 
 ## OUTPUT
 
-![Alt text](<img/. scriptest.sh 1 2 3.png>)
+![Alt text](<img/. scriptest.sh.png>)
 
 ls file1
 ## OUTPUT
@@ -517,7 +516,7 @@ fi
 
 cat strcomp.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 val1=baseball
 val2=hockey
 if [ $val1 \> $val2 ]
@@ -536,19 +535,18 @@ chmod 755 strcomp.sh
 # check file ownership
 cat < psswdperm.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ -O /etc/passwd ]
 then
 echo “You are the owner of the /etc/passwd file”
 else
 echo “Sorry, you are not the owner of the /etc/passwd file”
 fi
-^d
 ```
 
 cat psswdperm.sh 
 ```bash
-/#!/bin/bash
+#!/bin/bash
 if [ -O /etc/passwd ]
 then
 echo “You are the owner of the /etc/passwd file”
@@ -564,7 +562,7 @@ fi
 # check if with file location
 cat>ifnested.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -581,11 +579,10 @@ fi
 else
 echo “Sorry, the object does not exist”
 fi
-^d
 ```
 cat ifnested.sh 
-```
-\#!/bin/bash
+```bash
+#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -607,12 +604,12 @@ fi
 ./ifnested.sh 
 ## OUTPUT
 
-![Alt text](<img/. ifnested.sh .png>)
+![Alt text](<img/. ifnested.sh.png>)
 
 # using numeric test comparisons
 cat > iftest.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 val1=10
 val2=11
 if [ $val1 -gt 5 ]
@@ -625,13 +622,12 @@ echo “The values are equal”
 else
 echo “The values are different”
 fi
-^d
 ```
 
 
 cat iftest.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 val1=10
 val2=11
 if [ $val1 -gt 5 ]
@@ -646,17 +642,17 @@ echo “The values are different”
 fi
 ```
 
-$ chmod 755 iftest.sh
+chmod 755 iftest.sh
  
-$ ./iftest.sh 
+./iftest.sh 
 ## OUTPUT
 
-![Alt text](<img/. iftest.sh.png>)
+![Alt text](<img/. iftest.sh .png>)
 
 # check if a file
 cat > ifnested.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -673,12 +669,11 @@ fi
 else
 echo “Sorry, the object does not exist”
 fi
-^d
 ```
 
 cat ifnested.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ -e $HOME ]
 then
 echo “$HOME The object exists, is it a file?”
@@ -702,12 +697,12 @@ $ chmod 755 ifnested.sh
 $ ./ifnested.sh 
 ## OUTPUT
 
-![Alt text](img/.ifnested.sh.png)
+![Alt text](<img/. ifnested.sh.png>)
 
 # looking for a possible value using elif
 cat elifcheck.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ $USER = Ram ]
 then
 echo "Welcome $USER"
@@ -727,17 +722,17 @@ echo "Sorry, you are not allowed here"
 fi
 ```
 
-$ chmod 755 elifcheck.sh
+chmod 755 elifcheck.sh
  
-$ ./elifcheck.sh 
+./elifcheck.sh 
 ## OUTPUT
 
-![Alt text](<img/. elifcheck.sh.png>)
+![Alt text](<img/. elifcheck.sh .png>)
 
 # testing compound comparisons
 cat> ifcompound.sh 
 ```bash
-\#!/bin/bash
+#!/bin/bash
 if [ -d $HOME ] && [ -w $HOME ]
 then
 echo "The file exists and you can write to it"
@@ -745,11 +740,11 @@ else
 echo "I cannot write to the file"
 fi
 ```
-$ chmod 755 ifcompound.sh
-$ ./ifcompound.sh 
+chmod 755 ifcompound.sh
+./ifcompound.sh 
 ## OUTPUT
 
-![Alt text](<img/. ifcompound.sh.png>)
+![Alt text](<img/. ifcompound.sh .png>)
 
 # using the case command
 cat >casecheck.sh 
@@ -784,16 +779,16 @@ echo $var1
 var1=$[ $var1 - 1 ]
 done
 ```
-$ chmod 755 whiletest.sh
+chmod 755 whiletest.sh
  
-$ ./whiletest.sh
+./whiletest.sh
  ## OUTPUT
 
  ![Alt text](<img/. whiletest.sh.png>)
  
 cat untiltest.sh 
 ```bash
-\#using the until command
+#using the until command
 var1=100
 until [ $var1 -eq 0 ]
 do
@@ -806,12 +801,11 @@ $ ./untiltest.sh
  ## OUTPUT
 
 ![Alt text](<img/. untiltest.sh.png>)
- 
- 
+
 cat forin1.sh 
 ```bash
-\#!/bin/bash
-\#basic for command
+#!/bin/bash
+#basic for command
 for test in Alabama Alaska Arizona Arkansas California Colorado
 do
 echo The next state is $test
@@ -826,23 +820,14 @@ $ ./forin1.sh
  
 cat forin2.sh 
 ```bash
-\#!/bin/bash
-\# another example of how not to use the for command
+#!/bin/bash
+# another example of how not to use the for command
 for test in I don't know if this'll work
 do
 echo “word:$test”
 done
  ```
  
-cat forin2.sh 
-```bash
-\#!/bin/bash
-\# another example of how not to use the for command
-for test in I don't know if this'll work
-do
-echo “word:$test”
-done
-```
 $ chmod 755 forin2.sh
  
 $ ./forin2.sh 
@@ -852,8 +837,8 @@ $ ./forin2.sh
 
 cat forin3.sh 
 ```bash
-\#!/bin/bash
-\# another example of how not to use the for command
+#!/bin/bash
+# another example of how not to use the for command
 for test in I don\'t know if "this'll" work
 do
 echo "word:$test"
@@ -863,7 +848,7 @@ $ chmod 755 forin3.sh
 $ ./forin3.sh 
 ## OUTPUT
 
-![Alt text](<img/. frorin3.sh.png>)
+![Alt text](<img/. forin3.sh.png>)
 
 cat forin1.sh 
 ```bash
@@ -891,7 +876,9 @@ echo "Visit beautiful $file“
 done
 ```
 $ chmod 777 forinfile.sh
-$ cat cities
+
+$ cat > cities
+```
 Hyderabad
 Alampur
 Basara
@@ -899,7 +886,11 @@ Warangal
 Adilabad
 Bhadrachalam
 Khammam
+```
+./forinfile.sh
+## OUTPUT
 
+![Alt text](<img/. firinfile.sh.png>)
 
 cat forctype.sh 
 ```bash
@@ -966,12 +957,13 @@ done
 echo "The for loop is completed“
 ```
 $ chmod 755 forbreak.sh
+
 $ ./forbreak.sh 
 ## OUTPUT
 
 ![Alt text](<img/. forbreak.sh.png>)
 
-cat forcontinue.sh 
+cat > forcontinue.sh 
 ```bash
 #!/bin/bash
 # breaking out of a for loop
@@ -1054,6 +1046,7 @@ cat argshift.sh
 done
 ```
 $ chmod 777 argshift.sh
+
 $ ./argshift.sh 1 2 3
 ## OUTPUT
 
@@ -1073,6 +1066,7 @@ for (( i=0;i<$ELEMENTS;i++)); do
 done
 ```
 $ chmod 777 argshift1.sh
+
 $ ./argshift1.sh 1 2 3
 ## OUTPUT
 
