@@ -415,13 +415,13 @@ gunzip backup.tar.gz
 # Shell Script
 ```
 echo '#!/bin/sh' > my-script.sh
-echo 'echo Hello World‘; exit 0 >> my-script.sh
+echo 'echo Hello World‘;exit 0 >> my-script.sh
 ```
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
 
-![Alt text](<img/ . my-script.sh.png>)
+![Alt text](<img/. my-script.sh.png>)
 
 cat << stop > herecheck.txt
 ```
